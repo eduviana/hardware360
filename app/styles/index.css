@@ -1,0 +1,117 @@
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.font-weight-300 {
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.fs-7 {
+  font-size: .8rem;
+}
+
+.text-gray {
+  color: #706F6F;
+}
+
+.start-25 {
+  left: 10rem;
+  top: 7rem;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-height {
+  height: 70vh;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.notebooks-bg {
+  background-color: rgba(52, 54, 54, 0.1);
+}
+
+.notebook-shadow {
+  box-shadow: 0 0 10px #ccc;
+}
+
+.product-height {
+  height: 240px;
+  object-fit: scale-down;
+}
+
+.card .hover-effect {
+  transition: all 700ms ease;
+}
+
+.card .hover-effect:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+/* CarouselMarcas */
+.bg-custom-gray {
+  background-color: rgba(0, 0, 0, 0.2)
+}
+/* CarouselMarcas */
+
+.cantidad-cuotas {
+  color: #198754;
+  line-height: 2rem;
+}
+
+
+.individual-product-image {
+  width: 70%;
+}
+
+.mercadopago-logo {
+  width: 7rem;
+}
+
+.minwidth-cuotas {
+  min-width: max-content;
+}
+
+
+
+.row-gap {
+  row-gap: 4rem;
+}
+
+.mt-7 {
+  margin-top: 7rem;
+}

@@ -1,0 +1,107 @@
+#bodyWrapper, #divFooter,.bordesGrisFooter {
+	background-color: #FFFFFF
+}
+
+.btn,#carrito,#menuHeader,#divFooter,.ui-widget-content,.ui-widget-header,.loginUsuario,.miCuenta div,.tituloCbox {
+	border-color: #034B03
+}
+
+.btn,#imgCarrito,.anadirProd,.circulo,.ui-widget-header ,.moduleRowSelected,.loginUsuario,.miCuenta div,.anadirCesta,.moduleRowOver {
+	background-color: #076E07
+}
+
+.btn,.loginUsuario,.miCuenta div {
+	font-family: "Lato",sans-serif
+}
+
+.btn,.loginUsuario,.miCuenta div,.textoModulo {
+	color: #FFFFFF
+}
+
+.contenedorProd,.contenedorDestacadoHome,
+#divCuadroNoticiaMultiples,
+#divCuadroDetalle,
+.contenedorBanner,.contenedorPages,.contenedorDetalleProd,.contenedorBannerHome {
+	background-color: #FFFFFF
+}
+
+.descripcionPage,.descripDetalle {
+	font-family: "Lato",sans-serif
+}
+
+.dropdown-menu {
+	background-color: #EEEEEE
+}
+
+.dropdown-menu,.dropdown-menu > li > a {
+	border-color: #EEEEEE;
+	color: #424143
+}
+
+.navbar {
+	border-color: #EEEEEE;
+	font-family: "Lato",sans-serif
+}
+
+.navbar .navbar-nav > li > a
+ {
+	color: #424143
+}
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus,
+.navbar .navbar-nav > .active > a,
+
+.navbar .navbar-nav > .active > a:hover,
+
+.navbar .navbar-nav > .active > a:focus,
+.navbar .navbar-nav > .open > a,
+
+.navbar .navbar-nav > .open > a:hover,
+
+.navbar .navbar-nav > .open > a:focus,
+.dropdown-menu > li > a:hover,
+
+.dropdown-menu > li > a:focus {
+	background-color: #EEEEEE
+}
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus,
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus,
+.navbar .navbar-nav > .open > a,
+.navbar .navbar-nav > .open > a:hover,
+.navbar .navbar-nav > .open > a:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+	color: #FFFFFF
+}
+
+.navbar,#menuHeader,#carrito {
+	background-color: #EEEEEE
+}
+
+.orderEdit {
+	color: #076E07
+}
+
+.pestanaDestacado {
+	background-color: #333333
+}
+
+.precioProducto {
+	color: #007F00
+}
+
+body {
+	background-color: #FFFFFF;
+	font-family: "Montserrat Regular",sans-serif
+}
+
+body,
+.contenidoDestacadoFront a,#renglonHome > td > a {
+	color: #343636
+}
+
