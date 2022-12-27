@@ -1,53 +1,49 @@
-# Welcome to Remix!
+# Project Title
 
-- [Remix Docs](https://remix.run/docs)
+Hardware360 es un sitio web de venta de hardware y tecnología.
 
-## Development
+## Description
 
-From your terminal:
+El frontend está desarrollado con Remix y desplegado en Vercel. El backend está desarrolado en Strapi v4 y desplegado en Render como web service. La base de datos es PostrgresSql y se encuentra alojada en Render.
+Esta es la primer version de la web y voy a estar agregando nuevas features, mejorando la visualización en dispositivos móviles y optimizando el código.  
 
-```sh
-npm run dev
+## Getting Started
+
+### Dependencies
+
+* Yarn o Npm
+* Node >= 14
+
+### Installing
+
+* yarn
+* npm install
+
+### Executing program
+```
+ yarn dev
+ npm start
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
+## Help
 
-## Deployment
+Si encuentras algun error o tienes alguna sugerencia házmelo saber!.
 
-First, build your app for production:
 
-```sh
-npm run build
-```
+## Authors
 
-Then run the app in production mode:
+ Eduardo Daniel Viana 
+ email: eduardoviana83@gmail.com
+ linkedin: www.linkedin.com/in/eduardo-viana83
 
-```sh
-npm start
-```
+## Version History
 
-Now you'll need to pick a host to deploy it to.
+* 0.1
+    * Initial Release
 
-### DIY
 
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
+## Acknowledgments
 
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
+Inspiration, code snippets, etc.
+* [venex](https://www.venex.com.ar/)
+* [compragammer](https://compragamer.com/)
