@@ -14,12 +14,63 @@ import msi from "../../public/img/carousel-marcas/msi.webp";
 import nvidia from "../../public/img/carousel-marcas/nvidia.webp";
 import palit from "../../public/img/carousel-marcas/palit.webp";
 
-
 const CarouselMarcas = () => {
   return (
     <>
-     <div className="my-5 pb-5" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
-     <div className="row">
+      <div
+        className="my-5 p-5"
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+      >
+        <div className="container text-center">
+          <div className="row row-cols-1 row-cols-xs-3 row-cols-md-6 justify-content-center align-items-center gap-5">
+            <div className="col p-2">
+              <img src={amd} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={aorus} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={apple} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={asus} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={corsair} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={dell} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={msi} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={palit} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={gigabyte} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={hyperx} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={intel} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={kingstone} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={lenovo} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={logitech} className="" alt="..." />
+            </div>
+            <div className="col p-2">
+              <img src={nvidia} className="" alt="..." />
+            </div>
+          </div>
+        </div>
+        {/* <div className="row">
         <div className="col-12 d-flex justify-content-between flex-wrap align-items-center g-5">
           <img src={amd} className="" alt="..." />
           <img src={aorus} className="" alt="..." />
@@ -42,8 +93,8 @@ const CarouselMarcas = () => {
           <img src={logitech} className="" alt="..." />
           <img src={nvidia} className="" alt="..." />
         </div>
+      </div> */}
       </div>
-     </div>
     </>
   );
 };

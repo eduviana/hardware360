@@ -16,7 +16,7 @@ const Producto = ({ producto, direccion }) => {
             alt={`Imagen producto ${marca}`}
           ></img>
           {oferta && (
-            <span className="badge text-bg-success fs-6 position-absolute top-0 mt-2 ms-2">
+            <span className="badge fs-7 font-weight-700 text-bg-success position-absolute top-0 mt-2 ms-2">
               {descuento}% OFF
             </span>
           )}

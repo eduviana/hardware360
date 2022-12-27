@@ -8,11 +8,17 @@ const ModalCalcularCuotas = () => {
   const [cuotaSeleccionada, setCuotaSeleccionada] = useState("");
 
   const handleTarjeta = (e) => {
-    setTarjetaSeleccionada(e.target.value);
+    if (e.target.value !== "Seleccionar Tarjeta") {
+      setTarjetaSeleccionada(e.target.value);
+      console.log(e.target.value);
+    }
   };
 
   const handleBanco = (e) => {
-    setBancoSeleccionado(e.target.value);
+    if (e.target.value !== "Seleccionar Banco") {
+      setBancoSeleccionado(e.target.value);
+      console.log(e.target.value);
+    }
   };
 
   const handleCuota = (e) => {
@@ -23,10 +29,10 @@ const ModalCalcularCuotas = () => {
   const mostrarCuotas = () => {
     if (tarjetaSeleccionada && bancoSeleccionado) {
       return (
-        <>
-          <div className="form-check mt-5">
+        <div className="container d-flex flex-column gap-5 mt-5">
+          <div className="form-check">
             <div className="d-flex justify-content-evenly align-items-center">
-              <div className="d-flex align-items-center gap-2 ">
+              <div className="d-flex gap-2 ">
                 <input
                   className="form-check-input"
                   type="radio"
@@ -35,7 +41,7 @@ const ModalCalcularCuotas = () => {
                   onClick={handleCuota}
                 />
                 <label
-                  className="form-check-label fs-5"
+                  className="form-check-label fs-5 widthCuota"
                   htmlFor="flexRadioDefault1"
                 >
                   1 cuota
@@ -47,9 +53,9 @@ const ModalCalcularCuotas = () => {
             </div>
           </div>
 
-          <div className="form-check mt-5">
+          <div className="form-check">
             <div className="d-flex justify-content-evenly align-items-center">
-              <div className="d-flex align-items-center gap-2 ">
+              <div className="d-flex gap-2 widthCuota">
                 <input
                   className="form-check-input"
                   type="radio"
@@ -58,7 +64,7 @@ const ModalCalcularCuotas = () => {
                   onClick={handleCuota}
                 />
                 <label
-                  className="form-check-label fs-5"
+                  className="form-check-label fs-5 widthCuota"
                   htmlFor="flexRadioDefault1"
                 >
                   3 cuotas
@@ -70,9 +76,9 @@ const ModalCalcularCuotas = () => {
             </div>
           </div>
 
-          <div className="form-check mt-5">
+          <div className="form-check">
             <div className="d-flex justify-content-evenly align-items-center">
-              <div className="d-flex align-items-center gap-2 ">
+              <div className="d-flex gap-2 widthCuota">
                 <input
                   className="form-check-input"
                   type="radio"
@@ -81,7 +87,7 @@ const ModalCalcularCuotas = () => {
                   onClick={handleCuota}
                 />
                 <label
-                  className="form-check-label fs-5"
+                  className="form-check-label fs-5 widthCuota"
                   htmlFor="flexRadioDefault1"
                 >
                   6 cuotas
@@ -93,9 +99,9 @@ const ModalCalcularCuotas = () => {
             </div>
           </div>
 
-          <div className="form-check mt-5">
+          <div className="form-check">
             <div className="d-flex justify-content-evenly align-items-center">
-              <div className="d-flex align-items-center gap-2 ">
+              <div className="d-flex gap-2 widthCuota">
                 <input
                   className="form-check-input"
                   type="radio"
@@ -104,7 +110,7 @@ const ModalCalcularCuotas = () => {
                   onClick={handleCuota}
                 />
                 <label
-                  className="form-check-label fs-5"
+                  className="form-check-label fs-5 widthCuota"
                   htmlFor="flexRadioDefault1"
                 >
                   9 cuotas
@@ -116,9 +122,9 @@ const ModalCalcularCuotas = () => {
             </div>
           </div>
 
-          <div className="form-check mt-5">
+          <div className="form-check">
             <div className="d-flex justify-content-evenly align-items-center">
-              <div className="d-flex align-items-center gap-2 ">
+              <div className="d-flex gap-2 widthCuota">
                 <input
                   className="form-check-input"
                   type="radio"
@@ -127,7 +133,7 @@ const ModalCalcularCuotas = () => {
                   onClick={handleCuota}
                 />
                 <label
-                  className="form-check-label fs-5"
+                  className="form-check-label fs-5 widthCuota"
                   htmlFor="flexRadioDefault1"
                 >
                   12 cuotas
@@ -139,9 +145,9 @@ const ModalCalcularCuotas = () => {
             </div>
           </div>
 
-          <div className="form-check mt-5">
+          <div className="form-check">
             <div className="d-flex justify-content-evenly align-items-center">
-              <div className="d-flex align-items-center gap-2 ">
+              <div className="d-flex gap-2 widthCuota">
                 <input
                   className="form-check-input"
                   type="radio"
@@ -150,7 +156,7 @@ const ModalCalcularCuotas = () => {
                   onClick={handleCuota}
                 />
                 <label
-                  className="form-check-label fs-5"
+                  className="form-check-label fs-5 widthCuota"
                   htmlFor="flexRadioDefault1"
                 >
                   18 cuotas
@@ -162,9 +168,9 @@ const ModalCalcularCuotas = () => {
             </div>
           </div>
 
-          <div className="form-check mt-5">
+          <div className="form-check">
             <div className="d-flex justify-content-evenly align-items-center">
-              <div className="d-flex align-items-center gap-2 ">
+              <div className="d-flex gap-2 widthCuota">
                 <input
                   className="form-check-input"
                   type="radio"
@@ -173,7 +179,7 @@ const ModalCalcularCuotas = () => {
                   onClick={handleCuota}
                 />
                 <label
-                  className="form-check-label fs-5"
+                  className="form-check-label fs-5 widthCuota"
                   htmlFor="flexRadioDefault1"
                 >
                   24 cuotas
@@ -184,7 +190,7 @@ const ModalCalcularCuotas = () => {
               </div>
             </div>
           </div>
-        </>
+        </div>
       );
     }
   };

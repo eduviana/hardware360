@@ -1,6 +1,5 @@
 import { Link } from "@remix-run/react";
 
-
 const Header = () => {
   return (
     <header>
@@ -121,11 +120,12 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
+                <Link className="nav-link" aria-current="page" to="cart">
                   ¡Imperdibles!
-                </a>
+                </Link>
               </li>
             </ul>
+
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
@@ -137,6 +137,7 @@ const Header = () => {
                 Buscar
               </button>
             </form>
+         
           </div>
         </div>
       </nav>
