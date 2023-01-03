@@ -1,14 +1,15 @@
+import { useEffect, useState } from "react";
 import { Meta, Links, Outlet, Scripts, LiveReload, ScrollRestoration } from "@remix-run/react";
 import styles from "~/styles/index.css";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
 import favicon from "../public/img/favicon.webp";
-import { MiProvider } from "./context/miProvider";
+
 
 export function meta() {
   return {
     charset: "utf-8",
-    title: "Hardware 360 - Remix",
+    title: "Hardware360 - Remix",
     viewport: "width=device-width,initial-scale=1",
   };
 }
@@ -50,9 +51,54 @@ export function links() {
 }
 
 export default function App() {
+
+  const carritoLS = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem("carrito")) ?? [] : null
+  const [carrito, setCarrito] = useState(carritoLS);
+
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+  }, [carrito])
+  
+
+  const agregarCarrito = (producto) => {
+    if(carrito.some(productoState => productoState.id === producto.id)) {
+      const carritoActualizado = carrito.map( productoState => {
+        if(productoState.id === producto.id) {
+          productoState.cantidad = producto.cantidad
+        }
+        return productoState
+      })
+      setCarrito(carritoActualizado)
+    } else {
+      setCarrito([...carrito, producto]);
+    }
+  }
+
+  const actualizarCantidad = (producto) => {
+    const carritoActualizado = carrito.map(productoState => {
+      if(productoState.id === producto.id) {
+        productoState.cantidad = producto.cantidad
+      }
+      return productoState
+    })
+    setCarrito(carritoActualizado)
+  }
+
+  const eliminarProducto = (id) => {
+    const carritoActualizado = carrito.filter(productoState => productoState.id !== id)
+    setCarrito(carritoActualizado)
+  }
+
   return (
     <Document>
-      <Outlet />
+      <Outlet 
+        context={{
+          agregarCarrito,
+          carrito,
+          actualizarCantidad,
+          eliminarProducto
+        }}
+      />
     </Document>
   );
 }
@@ -65,11 +111,9 @@ function Document({ children }) {
         <Links />
       </head>
       <body>
-        <MiProvider>
           <Header />
           {children}
           <Footer />
-        </MiProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

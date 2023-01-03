@@ -34,7 +34,7 @@ export function meta({ data }) {
 
 const PlacaDeVideo = () => {
   const placaDeVideo = useLoaderData();
-
+  const { id } = placaDeVideo.data[0];
   const {
     marca,
     modelo,
@@ -51,6 +51,7 @@ const PlacaDeVideo = () => {
     <div className="container mt-5">
       <Volver />
       <ProductoInformacion
+        id={id}
         marca={marca}
         modelo={modelo}
         precio={precio}

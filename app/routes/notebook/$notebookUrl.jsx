@@ -5,7 +5,6 @@ import ProductoInformacion from "~/components/productoInformacion";
 import ListadoEspecificaciones from "~/components/notebook/listadoEspecificaciones";
 import Volver from "~/components/volver";
 
-
 export async function loader({ params }) {
   const { notebookUrl } = params;
   const notebook = await getNotebook(notebookUrl);
@@ -33,6 +32,7 @@ export function meta({ data }) {
 
 const Notebook = () => {
   const notebook = useLoaderData();
+  const { id } = notebook.data[0];
   const {
     marca,
     modelo,
@@ -53,11 +53,15 @@ const Notebook = () => {
     usoRecomendado,
   } = notebook.data[0].attributes;
 
+  
+
+
   return (
     <>
-     <Volver />
+      <Volver />
       <div className="container mt-5">
         <ProductoInformacion
+          id={id}
           marca={marca}
           modelo={modelo}
           precio={precio}

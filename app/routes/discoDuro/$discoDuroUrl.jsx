@@ -31,7 +31,7 @@ export function meta({ data }) {
 
 const DiscoDuro = () => {
   const discoDuro = useLoaderData();
-
+  const { id } = discoDuro.data[0];
   const {
     marca,
     modelo,
@@ -48,6 +48,7 @@ const DiscoDuro = () => {
   return (
     <div className="container mt-5">
       <ProductoInformacion
+        id={id}
         tipo={tipo}
         marca={marca}
         modelo={modelo}

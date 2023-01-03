@@ -35,7 +35,7 @@ export function meta({ data }) {
 
 const PcEscritorio = () => {
   const pcEscritorio = useLoaderData();
-
+  const { id } = pcEscritorio.data[0];
   const {
     marca,
     modelo,
@@ -55,10 +55,13 @@ const PcEscritorio = () => {
     usoRecomendado,
   } = pcEscritorio.data[0].attributes;
 
+  console.log(pcEscritorio)
+
   return (
     <div className="container mt-5">
       <Volver />
       <ProductoInformacion
+        id={id}
         marca={marca}
         modelo={modelo}
         precio={precio}

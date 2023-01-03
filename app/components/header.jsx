@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react";
+import IconoCarrito from "./iconos/iconoCarrito";
 
 const Header = () => {
   return (
@@ -120,11 +121,15 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="cart">
+              <a className="nav-link" aria-current="page" href="#">
                   ¡Imperdibles!
-                </Link>
+                </a>
               </li>
             </ul>
+
+            <Link to="carrito">
+              <IconoCarrito />
+            </Link>
 
             <form className="d-flex" role="search">
               <input

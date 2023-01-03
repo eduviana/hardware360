@@ -31,7 +31,7 @@ export function meta({ data }) {
 
 const Impresora = () => {
   const impresora = useLoaderData();
-
+  const { id } = impresora.data[0];
   const {
     tipo,
     marca,
@@ -45,9 +45,12 @@ const Impresora = () => {
     especificaciones,
   } = impresora.data[0].attributes;
 
+  console.log(id)
+
   return (
     <div className="container mt-5">
         <ProductoInformacion
+        id={id}
         tipo={tipo}
         marca={marca}
         modelo={modelo}

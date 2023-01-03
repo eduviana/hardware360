@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useOutletContext } from "@remix-run/react";
 import CarouselProducto from "~/components/carouselProducto";
 import { calcularDescuentoProducto } from "~/helpers/calcularDescuento";
 import IconoDinero from "~/components/iconos/iconoDinero";
@@ -7,9 +9,8 @@ import IconoEnvio from "~/components/iconos/iconoEnvio";
 import IconoFlechaDerecha from "~/components/iconos/iconoFlechaDerecha";
 import ModalCalcularCuotas from "~/components/modalCalcularCuotas";
 
-
-
 const ProductoInformacion = ({
+  id,
   tipo,
   marca,
   modelo,
@@ -19,11 +20,32 @@ const ProductoInformacion = ({
   oferta,
   descuento,
 }) => {
+  const { agregarCarrito } = useOutletContext();
+  const [cantidad, setCantidad] = useState(0);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (cantidad < 1) {
+      alert("Debes seleccionar una cantidad");
+      return;
+    }
+    const productoSeleccionado = {
+      cantidad,
+      id,
+      tipo,
+      marca,
+      modelo,
+      precio,
+      imagen,
+      precioLista,
+      oferta,
+      descuento,
+    };
+    agregarCarrito(productoSeleccionado);
+  };
 
   return (
     <div className="card text-bg-light mb-5">
-      
       <div className="row align-items-center g-4">
         <div className="col-md-8">
           <CarouselProducto imagen={imagen} />
@@ -59,7 +81,10 @@ const ProductoInformacion = ({
               ${precioLista}
               <div className="d-flex align-items-center gap-1 text-center">
                 <IconoPrecioLista />
-                <p className="fs-6 font-weight-600 m-0" style={{ color: "#A48a7b" }}>
+                <p
+                  className="fs-6 font-weight-600 m-0"
+                  style={{ color: "#A48a7b" }}
+                >
                   Precio de lista
                 </p>
               </div>
@@ -84,7 +109,7 @@ const ProductoInformacion = ({
                   Calcular cuotas
                 </button>
 
-               <ModalCalcularCuotas />
+                <ModalCalcularCuotas />
               </div>
             </div>
             <hr />
@@ -97,9 +122,33 @@ const ProductoInformacion = ({
               </div>
             </div>
             <hr />
-            <div className="card-text">
+            {/* <div className="card-text">
               <button className="btn btn-primary fs-6 py-3 font-weight-500 text-uppercase w-100">Comprar</button>
-            </div>
+            </div> */}
+            <form className="d-flex flex-column gap-3" onSubmit={handleSubmit}>
+              <label className="fs-6" htmlFor="cantidad">
+                Cantidad
+              </label>
+
+              <select
+                className="text-center p-1 border border-dark-subtle rounded"
+                id="cantidad"
+                onChange={(e) => setCantidad(+e.target.value)}
+              >
+                <option value="0">-- Seleccione --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+
+              <input
+                type="submit"
+                value="Agregar al carrito"
+                className="btn btn-primary fs-6 py-3 font-weight-500 text-uppercase"
+              />
+            </form>
           </div>
         </div>
       </div>
